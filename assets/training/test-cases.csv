@@ -1,0 +1,8 @@
+﻿TestID,Requirement,Action,Expected,Actual,Status,Evidence
+TC-01,FR-01,Search AssetID B01,Exactly one record; correct building,,Not run,
+TC-02,FR-01,Search AssetID Z99,No records,,Not run,
+TC-03,FR-02,Inspect B02 status,Maintenance,,Not run,
+TC-04,FR-03,Planar 100 m buffer at G01; intersect building footprints,B01 and B02 only,,Not run,
+TC-05,Data quality,Check source geometry counts,3 buildings; 2 gates; 2 roads,,Not run,
+TC-06,Data quality,Check asset IDs,No duplicates or null IDs,,Not run,
+TC-07,Spatial reference,Inspect converted CAD CRS,EPSG:32637; meters,,Not run,

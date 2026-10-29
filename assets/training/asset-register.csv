@@ -1,0 +1,8 @@
+﻿AssetID,Name,Status,CADLayer,Geometry,MinX_or_X,MinY_or_Y,MaxX,MaxY
+B01,Administration,Active,BUILDINGS,Polygon,582030,2366020,582060,2366050
+B02,Workshop,Maintenance,BUILDINGS,Polygon,582080,2366000,582110,2366030
+B03,Storage,Inactive,BUILDINGS,Polygon,582180,2366150,582220,2366190
+G01,Service gate,Active,GATES,Point,582000,2366000,,
+G02,North gate,Active,GATES,Point,582100,2366180,,
+R01,Service road,Active,ROADS,Polyline,581970,2366000,582250,2366000
+R02,North road,Active,ROADS,Polyline,582100,2365970,582100,2366210

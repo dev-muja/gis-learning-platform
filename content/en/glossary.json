@@ -1,1 +1,260 @@
-﻿[]
+[
+  {
+    "en": "Geographic Information System (GIS)",
+    "ar": "نظام المعلومات الجغرافية",
+    "description": "A system for capturing, managing, analyzing and displaying location-related information. It combines people, procedures, software, hardware and data.",
+    "chapter": 1
+  },
+  {
+    "en": "Spatial Analysis",
+    "ar": "التحليل المكاني",
+    "description": "Examining location, distance, overlap and geographic relationships to answer a specific question.",
+    "chapter": 1
+  },
+  {
+    "en": "Asset",
+    "ar": "أصل",
+    "description": "An item an organization manages, such as a building, gate or device. Different assets may need different spatial representations.",
+    "chapter": 1
+  },
+  {
+    "en": "Stakeholder",
+    "ar": "صاحب مصلحة",
+    "description": "A person or group that influences or is affected by the system, such as the client, user or data owner.",
+    "chapter": 2
+  },
+  {
+    "en": "Functional Requirement",
+    "ar": "متطلب وظيفي",
+    "description": "A behavior the system must provide, such as finding a building by its identifier.",
+    "chapter": 2
+  },
+  {
+    "en": "Non-functional Requirement",
+    "ar": "متطلب غير وظيفي",
+    "description": "A quality attribute or constraint, such as a specified response time on defined hardware and data.",
+    "chapter": 2
+  },
+  {
+    "en": "Acceptance Criteria",
+    "ar": "معايير القبول",
+    "description": "Verifiable conditions defining when a function or result is acceptable.",
+    "chapter": 2
+  },
+  {
+    "en": "Feature",
+    "ar": "معلم جغرافي",
+    "description": "A geographic object with geometry and attributes, such as one building record.",
+    "chapter": 3
+  },
+  {
+    "en": "Vector Data",
+    "ar": "بيانات متجهة",
+    "description": "Representing entities with points, lines and polygons.",
+    "chapter": 3
+  },
+  {
+    "en": "Raster Data",
+    "ar": "بيانات شبكية",
+    "description": "A grid of cells, each storing a value or values such as image bands.",
+    "chapter": 3
+  },
+  {
+    "en": "Layer",
+    "ar": "طبقة عرض",
+    "description": "A reference to a data source with display, labeling and filtering rules; a layer is not necessarily a new copy of the data.",
+    "chapter": 3
+  },
+  {
+    "en": "Coordinate Reference System (CRS)",
+    "ar": "نظام مرجعي للإحداثيات",
+    "description": "A definition that gives coordinate numbers their geographic meaning, including reference, units and representation.",
+    "chapter": 4
+  },
+  {
+    "en": "Geographic Coordinate System (GCS)",
+    "ar": "نظام إحداثيات جغرافي",
+    "description": "Describes positions with angular coordinates such as longitude and latitude on a defined reference.",
+    "chapter": 4
+  },
+  {
+    "en": "Projected Coordinate System (PCS)",
+    "ar": "نظام إحداثيات مسقط",
+    "description": "Represents the Earth on a plane with linear coordinates such as easting and northing.",
+    "chapter": 4
+  },
+  {
+    "en": "Datum",
+    "ar": "مرجع جيوديسي",
+    "description": "A reference connecting a coordinate model to the Earth; different datums may require a geographic transformation.",
+    "chapter": 4
+  },
+  {
+    "en": "Universal Transverse Mercator (UTM)",
+    "ar": "نظام إسقاط عالمي بمناطق",
+    "description": "A family of projected systems divided into longitudinal zones. Zone, hemisphere and datum must be specified.",
+    "chapter": 4
+  },
+  {
+    "en": "Geodatabase",
+    "ar": "قاعدة بيانات جغرافية",
+    "description": "An ArcGIS structure organizing features, tables, relationships and rules; types include file and enterprise geodatabases.",
+    "chapter": 5
+  },
+  {
+    "en": "Feature Class",
+    "ar": "فئة معالم",
+    "description": "A collection of features with the same geometry type, a spatial reference and common fields.",
+    "chapter": 5
+  },
+  {
+    "en": "Feature Dataset",
+    "ar": "مجموعة فئات معالم",
+    "description": "A container for related feature classes sharing a spatial reference, used in workflows such as topology.",
+    "chapter": 5
+  },
+  {
+    "en": "Domain",
+    "ar": "مجال قيم",
+    "description": "A definition of allowed values: coded values or a numeric range for appropriate fields.",
+    "chapter": 5
+  },
+  {
+    "en": "Topology",
+    "ar": "قواعد العلاقات المكانية",
+    "description": "Rules checking geometric relationships, such as disallowing overlapping buildings when appropriate to the business model.",
+    "chapter": 5
+  },
+  {
+    "en": "Project (.aprx)",
+    "ar": "ملف مشروع",
+    "description": "Stores maps, layouts, connections and settings, referencing data sources that may live outside the file.",
+    "chapter": 6
+  },
+  {
+    "en": "Catalog",
+    "ar": "مستعرض الموارد",
+    "description": "A place to browse folders, databases, maps and tools.",
+    "chapter": 6
+  },
+  {
+    "en": "Symbology",
+    "ar": "التمثيل بالرموز",
+    "description": "Rules for colors and shapes that communicate attribute values visually.",
+    "chapter": 6
+  },
+  {
+    "en": "Geoprocessing",
+    "ar": "المعالجة الجغرافية",
+    "description": "Operations with defined inputs, parameters and outputs that transform or analyze data.",
+    "chapter": 6
+  },
+  {
+    "en": "Computer-Aided Design (CAD)",
+    "ar": "التصميم بمساعدة الحاسب",
+    "description": "Using computer tools to create and document engineering designs.",
+    "chapter": 7
+  },
+  {
+    "en": "DWG / DXF",
+    "ar": "صيغ ملفات رسم",
+    "description": "DWG is a common AutoCAD drawing format; DXF exchanges drawing information. Neither is inherently a GIS database.",
+    "chapter": 7
+  },
+  {
+    "en": "CAD Layer",
+    "ar": "طبقة رسم",
+    "description": "Organizes drawing entities and display properties; distinct from a GIS feature class or display layer.",
+    "chapter": 7
+  },
+  {
+    "en": "Block",
+    "ar": "كتلة رسم",
+    "description": "A reusable grouping, such as a gate symbol, which may contain CAD attributes.",
+    "chapter": 7
+  },
+  {
+    "en": "Closed Polyline",
+    "ar": "خط متعدد مغلق",
+    "description": "A closed connected path that may represent a boundary; closure alone does not guarantee all geometric validity.",
+    "chapter": 7
+  },
+  {
+    "en": "Georeferencing",
+    "ar": "الإسناد الجغرافي",
+    "description": "Aligning drawing coordinates to known ground locations with a suitable transformation; unnecessary if the drawing is already correctly positioned.",
+    "chapter": 8
+  },
+  {
+    "en": "CAD To Geodatabase",
+    "ar": "أداة تحويل CAD",
+    "description": "Reads CAD data and creates feature classes in a geodatabase feature dataset.",
+    "chapter": 8
+  },
+  {
+    "en": "Data Mapping",
+    "ar": "مطابقة البيانات",
+    "description": "Defining how source layers and properties map to target classes and fields.",
+    "chapter": 8
+  },
+  {
+    "en": "ArcGIS for AutoCAD",
+    "ar": "إضافة تكامل",
+    "description": "An Esri plug-in supporting ArcGIS data access and editing in supported AutoCAD environments.",
+    "chapter": 8
+  },
+  {
+    "en": "Buffer",
+    "ar": "نطاق قرب",
+    "description": "A region within a specified distance of a feature. Measurement method and geometry affect the result.",
+    "chapter": 9
+  },
+  {
+    "en": "Select By Location",
+    "ar": "تحديد بالموقع",
+    "description": "Selecting features using spatial relationships such as intersection, containment or proximity.",
+    "chapter": 9
+  },
+  {
+    "en": "Map Layout",
+    "ar": "تخطيط الخريطة",
+    "description": "An output page containing a map frame, title, legend, scale bar and source information.",
+    "chapter": 9
+  },
+  {
+    "en": "Metadata",
+    "ar": "بيانات وصفية عن المصدر",
+    "description": "Information describing data origin, date, reference, quality and limitations.",
+    "chapter": 9
+  },
+  {
+    "en": "Quality Assurance (QA)",
+    "ar": "ضمان الجودة",
+    "description": "Preventive processes governing production, such as source acceptance checklists and model reviews.",
+    "chapter": 10
+  },
+  {
+    "en": "Quality Control (QC)",
+    "ar": "ضبط الجودة",
+    "description": "Checks on outputs to detect defects, such as incorrect positions or duplicate identifiers.",
+    "chapter": 10
+  },
+  {
+    "en": "User Acceptance Testing (UAT)",
+    "ar": "اختبار قبول المستخدم",
+    "description": "The intended user verifies that results support their tasks and agreed acceptance criteria.",
+    "chapter": 10
+  },
+  {
+    "en": "Requirements Traceability",
+    "ar": "تتبّع المتطلبات",
+    "description": "Linking each requirement to design, implementation, testing and evidence.",
+    "chapter": 10
+  },
+  {
+    "en": "Test Case",
+    "ar": "حالة اختبار",
+    "description": "A specification of preconditions, inputs, steps, expected and actual results, and status.",
+    "chapter": 10
+  }
+]

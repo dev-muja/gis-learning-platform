@@ -1,1 +1,200 @@
-﻿[]
+[
+  {
+    "id": "gis",
+    "type": "documentation",
+    "title": "What is GIS?",
+    "publisher": "Esri",
+    "url": "https://www.esri.com/en-us/what-is-gis/overview",
+    "cost": "Free",
+    "description": "Start with the discipline, applications and spatial decision-making."
+  },
+  {
+    "id": "gentle",
+    "type": "book",
+    "title": "A Gentle Introduction to GIS",
+    "publisher": "QGIS",
+    "url": "https://docs.qgis.org/3.44/en/docs/gentle_gis_introduction/",
+    "cost": "Free online book",
+    "description": "An open foundational text for concepts in chapters 1, 3 and 4."
+  },
+  {
+    "id": "qmanual",
+    "type": "book",
+    "title": "QGIS Training Manual",
+    "publisher": "QGIS",
+    "url": "https://docs.qgis.org/3.44/en/docs/training_manual/",
+    "cost": "Free manual",
+    "description": "Free practical exercises; an alternative when an ArcGIS license is unavailable."
+  },
+  {
+    "id": "gdb",
+    "type": "documentation",
+    "title": "Introduction to the geodatabase",
+    "publisher": "Esri",
+    "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/geodatabases/overview/what-is-a-geodatabase-.html",
+    "cost": "Free documentation",
+    "description": "Understand geodatabase structure, features, tables and rules."
+  },
+  {
+    "id": "pro",
+    "type": "documentation",
+    "title": "ArcGIS Pro Documentation",
+    "publisher": "Esri",
+    "url": "https://pro.arcgis.com/en/pro-app/latest/help/main/welcome-to-the-arcgis-pro-app-help.htm",
+    "cost": "Free documentation; software needs a license",
+    "description": "Reference for workflows and tools; interface details vary by version and license."
+  },
+  {
+    "id": "crs",
+    "type": "documentation",
+    "title": "Coordinate systems, projections, and transformations",
+    "publisher": "Esri",
+    "url": "https://pro.arcgis.com/en/pro-app/latest/help/mapping/properties/coordinate-systems-and-projections.htm",
+    "cost": "Free documentation",
+    "description": "Reference for coordinate systems, projections and transformations."
+  },
+  {
+    "id": "cad",
+    "type": "documentation",
+    "title": "Introduction to CAD data",
+    "publisher": "Esri",
+    "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/cad/what-is-cad-data.html",
+    "cost": "Free documentation",
+    "description": "CAD file support, direct reading and positioning requirements."
+  },
+  {
+    "id": "convert",
+    "type": "documentation",
+    "title": "CAD To Geodatabase",
+    "publisher": "Esri",
+    "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/conversion/cad-to-geodatabase.html",
+    "cost": "Free documentation; execution needs software",
+    "description": "Conversion parameters, output behavior and limitations."
+  },
+  {
+    "id": "integration",
+    "type": "documentation",
+    "title": "ArcGIS for AutoCAD",
+    "publisher": "Esri",
+    "url": "https://www.esri.com/en-us/arcgis/products/arcgis-for-autocad/overview",
+    "cost": "Check plug-in and service requirements",
+    "description": "Integration in CAD environments; explore after completing the core prototype."
+  },
+  {
+    "id": "buffer",
+    "type": "documentation",
+    "title": "Buffer tool",
+    "publisher": "Esri",
+    "url": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/buffer.htm",
+    "cost": "Free documentation",
+    "description": "Buffer methods, units and planar versus geodesic measurement."
+  },
+  {
+    "id": "basics",
+    "type": "course",
+    "title": "GIS Fundamentals / GIS Basics",
+    "publisher": "Esri Academy",
+    "url": "https://www.esri.com/en-us/training/catalog/5b73407f8659c25ea7014330/gis-fundamentals",
+    "cost": "Public items with a free account; check each item",
+    "description": "Start with GIS Basics. Access conditions can differ across items in the learning plan."
+  },
+  {
+    "id": "free",
+    "type": "course",
+    "title": "Free training catalog",
+    "publisher": "Esri Academy",
+    "url": "https://www.esri.com/en-us/training/catalog/search?f=free",
+    "cost": "Free-item filter; an account may be needed",
+    "description": "Search GIS Basics and ArcGIS Pro Basics and inspect each course’s prerequisites."
+  },
+  {
+    "id": "quick",
+    "type": "course",
+    "title": "ArcGIS Pro quick-start tutorials",
+    "publisher": "Esri",
+    "url": "https://pro.arcgis.com/en/pro-app/latest/get-started/pro-quickstart-tutorials.htm",
+    "cost": "Free tutorials; practice requires a license",
+    "description": "Short exercises on mapping, editing, analysis and layouts."
+  },
+  {
+    "id": "autocad",
+    "type": "course",
+    "title": "Get started with AutoCAD",
+    "publisher": "Autodesk",
+    "url": "https://www.autodesk.com/learn/ondemand/collection/get-started-with-autocad",
+    "cost": "Available learning content; software licensed separately",
+    "description": "Start with the interface, layers and 2D drawing before advanced tools."
+  },
+  {
+    "id": "esrivideo",
+    "type": "video",
+    "title": "Esri video learning",
+    "publisher": "Esri",
+    "url": "https://www.youtube.com/user/esritv",
+    "cost": "Free viewing",
+    "description": "Search the channel for ArcGIS Pro, CAD and geodatabase; prefer material matching your version."
+  },
+  {
+    "id": "autovideo",
+    "type": "video",
+    "title": "AutoCAD official channel",
+    "publisher": "Autodesk",
+    "url": "https://www.youtube.com/user/AutoCADExchange",
+    "cost": "Free viewing",
+    "description": "Search Layers, Units, Blocks and 2D Drawing."
+  },
+  {
+    "id": "devvideo",
+    "type": "video",
+    "title": "Esri Developers",
+    "publisher": "Esri",
+    "url": "https://www.youtube.com/@esridevs",
+    "cost": "Free viewing",
+    "description": "For later exploration of web maps and APIs after mastering the fundamentals."
+  },
+  {
+    "id": "paidbook",
+    "type": "book",
+    "title": "Getting to Know ArcGIS Pro 3.6",
+    "publisher": "Esri Press",
+    "url": "https://www.esri.com/en-us/esri-press/browse/getting-to-know-arcgis-pro-3-6",
+    "cost": "Paid book; choose a suitable edition",
+    "description": "Optional practical reference. Purchasing it is not required for this week’s project."
+  },
+  {
+    "id": "trial",
+    "type": "software",
+    "title": "ArcGIS Pro trial",
+    "publisher": "Esri",
+    "url": "https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial",
+    "cost": "Limited trial; check eligibility and conditions",
+    "description": "Check availability and eligibility before practice; trial terms and duration can change."
+  },
+  {
+    "id": "requirements",
+    "type": "software",
+    "title": "ArcGIS Pro system requirements",
+    "publisher": "Esri",
+    "url": "https://pro.arcgis.com/en/pro-app/latest/get-started/arcgis-pro-system-requirements.htm",
+    "cost": "Free information",
+    "description": "Check Windows, RAM, storage and version-specific prerequisites before installation."
+  },
+  {
+    "id": "autotrial",
+    "type": "software",
+    "title": "AutoCAD trial",
+    "publisher": "Autodesk",
+    "url": "https://www.autodesk.com/products/autocad/free-trial",
+    "cost": "Limited trial with conditions",
+    "description": "Educational access requires verified eligibility; being a graduate does not by itself ensure access."
+  },
+  {
+    "id": "qgis",
+    "type": "software",
+    "title": "QGIS Download",
+    "publisher": "QGIS",
+    "url": "https://qgis.org/download/",
+    "cost": "Free and open source",
+    "description": "Choose LTR for a stable start. It does not implement every geodatabase capability in the same way as ArcGIS."
+  }
+]

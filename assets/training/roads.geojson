@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "AssetID": "R01",
+        "Name": "Service road",
+        "Status": "Active"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            39.79079023657209,
+            21.394360787023597
+          ],
+          [
+            39.79349128796071,
+            21.39434802850535
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "AssetID": "R02",
+        "Name": "North road",
+        "Status": "Active"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            39.792042836960036,
+            21.394083838042754
+          ],
+          [
+            39.79205451308023,
+            21.396252084131923
+          ]
+        ]
+      }
+    }
+  ]
+}

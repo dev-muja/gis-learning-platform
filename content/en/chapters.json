@@ -1,1 +1,752 @@
-﻿[]
+[
+  {
+    "id": 1,
+    "title": "Introduction to GIS",
+    "subtitle": "How does a question about location become a data-informed decision?",
+    "minutes": 35,
+    "diagram": "layers",
+    "goals": [
+      "Explain GIS and its components",
+      "Distinguish the discipline, software and data storage",
+      "Identify an analyst’s role in a spatial project"
+    ],
+    "prep": "Paper and a pen. No software installation is required.",
+    "terms": [
+      {
+        "en": "Geographic Information System (GIS)",
+        "ar": "نظام المعلومات الجغرافية",
+        "description": "A system for capturing, managing, analyzing and displaying location-related information. It combines people, procedures, software, hardware and data."
+      },
+      {
+        "en": "Spatial Analysis",
+        "ar": "التحليل المكاني",
+        "description": "Examining location, distance, overlap and geographic relationships to answer a specific question."
+      },
+      {
+        "en": "Asset",
+        "ar": "أصل",
+        "description": "An item an organization manages, such as a building, gate or device. Different assets may need different spatial representations."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Location adds a dimension to data",
+        "body": "A building table can describe names and status. Spatial information adds where a building is and what surrounds it. GIS connects each record to geometry: a point location, a line path or a polygon boundary. We can then ask which buildings are within 100 meters of a gate. We must define the distance rule, measurement method and positional quality before interpreting the answer."
+      },
+      {
+        "title": "The components work together",
+        "body": "Data is the material we analyze; software performs operations; hardware runs it; people interpret results; procedures govern collection, updates and approval. An attractive map with outdated data can support a wrong decision. Record the source, date and limitations of the information."
+      },
+      {
+        "title": "GIS, ArcGIS and AutoCAD",
+        "body": "GIS is the discipline and system. ArcGIS is Esri’s platform; ArcGIS Pro is a desktop application within it. AutoCAD is a drafting application in the CAD domain. A geodatabase organizes geographic data in ArcGIS. A project may receive engineering drawings through CAD and use GIS to manage assets and analyze their locations. Requirements determine the tools."
+      }
+    ],
+    "analyst": "Identify the decision, user, data source, data editor and approver. Understand the question before selecting a tool.",
+    "example": "Maintenance needs buildings nearest to a service gate. We need building footprints, gate locations and building status. Agree whether proximity means straight-line distance or walking distance along roads.",
+    "steps": [
+      "Write a two-sentence problem statement for facility asset management.",
+      "Identify three users and three spatial questions they need answered.",
+      "Sketch the relationship between the CAD drawing, database and map."
+    ],
+    "deliverable": "One page describing the problem, users and required decisions.",
+    "mistake": "Treating GIS as just a map image. Its value comes from data, analysis and the procedures behind it.",
+    "quiz": {
+      "q": "Which question requires spatial analysis?",
+      "options": [
+        "What is the facility manager’s name?",
+        "Which buildings are within 100 meters of the gate?",
+        "How many characters are in a building name?"
+      ],
+      "answer": 1,
+      "explain": "Proximity requires locations and distance measurement. The other questions can be answered from descriptive data alone."
+    },
+    "refs": [
+      "gis",
+      "gentle"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Problem Analysis and Requirements",
+    "subtitle": "Translate a client’s needs into functions, constraints and testable acceptance criteria.",
+    "minutes": 50,
+    "diagram": "workflow",
+    "goals": [
+      "Define a clear project scope",
+      "Write functional and non-functional requirements",
+      "Connect use cases with acceptance criteria"
+    ],
+    "prep": "Your chapter 1 output and a document editor or Markdown file.",
+    "terms": [
+      {
+        "en": "Stakeholder",
+        "ar": "صاحب مصلحة",
+        "description": "A person or group that influences or is affected by the system, such as the client, user or data owner."
+      },
+      {
+        "en": "Functional Requirement",
+        "ar": "متطلب وظيفي",
+        "description": "A behavior the system must provide, such as finding a building by its identifier."
+      },
+      {
+        "en": "Non-functional Requirement",
+        "ar": "متطلب غير وظيفي",
+        "description": "A quality attribute or constraint, such as a specified response time on defined hardware and data."
+      },
+      {
+        "en": "Acceptance Criteria",
+        "ar": "معايير القبول",
+        "description": "Verifiable conditions defining when a function or result is acceptable."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Interview before designing",
+        "body": "Ask about the existing process: how drawings arrive, who reviews them, recurring errors and delayed decisions. Request an example of a successful task and a failed task. Separate the client’s stated need from your proposed solution. Document assumptions that still need validation."
+      },
+      {
+        "title": "Write requirements and scope",
+        "body": "Use stable identifiers: FR-01 for ID search, FR-02 for status display and FR-03 for finding buildings near a gate. Specify inputs, outputs and required fields. A one-week prototype includes a desktop map, three layers, one proximity analysis and a test report. Authentication, a mobile application and enterprise synchronization are outside this prototype’s scope."
+      },
+      {
+        "title": "A testable use case",
+        "body": "A search use case starts with a user who has an identifier. The user enters it; the system searches, selects the building and displays its attributes. Alternative path: no match, with clear feedback. Acceptance example: searching B01 returns one record and selects the correct building. “The system is fast” needs a numeric target and a defined measurement environment."
+      }
+    ],
+    "analyst": "Translate broad requests into agreed requirements. Record conflicts, assumptions and decision rationale.",
+    "example": "“I want nearby buildings” becomes: the user selects a gate and a distance in meters; building footprints intersecting the buffer are selected. This differs from measuring from building centroids.",
+    "steps": [
+      "Write five client interview questions.",
+      "Write three functional and two measurable non-functional requirements.",
+      "Document one use case with a success and alternative path.",
+      "Define inclusions and exclusions for the one-week prototype."
+    ],
+    "deliverable": "A brief requirements document with FR-01 to FR-03, one use case and scope boundaries.",
+    "mistake": "Writing a software name as the client’s need. Software can be a legitimate constraint, but the need should describe a function or decision.",
+    "quiz": {
+      "q": "Which statement is more testable?",
+      "options": [
+        "The map is professional.",
+        "Search is excellent.",
+        "Searching B01 returns one record and selects the correct building."
+      ],
+      "answer": 2,
+      "explain": "The third statement specifies an input and a verifiable outcome."
+    },
+    "refs": [
+      "gis",
+      "pro"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Geographic Data Fundamentals",
+    "subtitle": "Points, lines, polygons and attributes represent the world for a particular purpose.",
+    "minutes": 45,
+    "diagram": "geometry",
+    "goals": [
+      "Choose an appropriate geometry type",
+      "Distinguish vector and raster",
+      "Explain how features, tables and layers relate"
+    ],
+    "prep": "Paper or a drawing tool; optionally inspect data in ArcGIS Pro.",
+    "terms": [
+      {
+        "en": "Feature",
+        "ar": "معلم جغرافي",
+        "description": "A geographic object with geometry and attributes, such as one building record."
+      },
+      {
+        "en": "Vector Data",
+        "ar": "بيانات متجهة",
+        "description": "Representing entities with points, lines and polygons."
+      },
+      {
+        "en": "Raster Data",
+        "ar": "بيانات شبكية",
+        "description": "A grid of cells, each storing a value or values such as image bands."
+      },
+      {
+        "en": "Layer",
+        "ar": "طبقة عرض",
+        "description": "A reference to a data source with display, labeling and filtering rules; a layer is not necessarily a new copy of the data."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Representation follows the question",
+        "body": "A building may be a point on a city overview or a polygon when area and boundaries matter. Roads may be lines for connectivity and routing, or polygons when the road surface boundary is needed. Geometry choice is a modeling decision driven by scale, accuracy and analysis needs."
+      },
+      {
+        "title": "Attributes and identity",
+        "body": "A building needs a stable identifier such as B01, a name, status and use. Distinguish a stable business identifier from a software-generated row ID. Do not join tables using names alone; names can repeat or change. NULL means unknown or unrecorded, while zero is an actual numeric value."
+      },
+      {
+        "title": "When raster is useful",
+        "body": "An aerial image is a pixel grid; an elevation model may store elevation per cell. Cell size affects detail, analysis and file size, but it does not by itself guarantee positional accuracy. A fine-resolution image can still be shifted. Our image background provides context, while asset layers remain separate vector datasets."
+      }
+    ],
+    "analyst": "Specify each entity’s geometry, fields, source, accuracy and update owner. Include these decisions in the data dictionary.",
+    "example": "Buildings: Polygon; Gates: Point; Roads: Polyline. Buildings contains AssetID, Name and Status. Two display layers can reference the same source: one symbolized by status and another by use.",
+    "steps": [
+      "Choose geometry for buildings, gates and roads.",
+      "Define five building fields with example values.",
+      "Distinguish positional quality, currency and completeness."
+    ],
+    "deliverable": "An entity table listing geometry types and required attributes.",
+    "mistake": "Assuming zooming in or adding decimal places improves source accuracy. Accuracy depends on measurement and recording.",
+    "quiz": {
+      "q": "Which geometry best represents a building footprint for area calculation?",
+      "options": [
+        "Point",
+        "Open polyline",
+        "Closed polygon"
+      ],
+      "answer": 2,
+      "explain": "A polygon bounds an area. A point has no area and an open line does not enclose a surface."
+    },
+    "refs": [
+      "gentle",
+      "qmanual"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Coordinates and Spatial Referencing",
+    "subtitle": "The essential step for placing drawings correctly and measuring distance.",
+    "minutes": 60,
+    "diagram": "coordinates",
+    "goals": [
+      "Understand GCS, PCS and datum",
+      "Distinguish Define Projection, Project and georeferencing",
+      "Choose and document an appropriate measurement method"
+    ],
+    "prep": "ArcGIS Pro for the exercise, or QGIS for the concept. Establish the known source coordinate reference.",
+    "terms": [
+      {
+        "en": "Coordinate Reference System (CRS)",
+        "ar": "نظام مرجعي للإحداثيات",
+        "description": "A definition that gives coordinate numbers their geographic meaning, including reference, units and representation."
+      },
+      {
+        "en": "Geographic Coordinate System (GCS)",
+        "ar": "نظام إحداثيات جغرافي",
+        "description": "Describes positions with angular coordinates such as longitude and latitude on a defined reference."
+      },
+      {
+        "en": "Projected Coordinate System (PCS)",
+        "ar": "نظام إحداثيات مسقط",
+        "description": "Represents the Earth on a plane with linear coordinates such as easting and northing."
+      },
+      {
+        "en": "Datum",
+        "ar": "مرجع جيوديسي",
+        "description": "A reference connecting a coordinate model to the Earth; different datums may require a geographic transformation."
+      },
+      {
+        "en": "Universal Transverse Mercator (UTM)",
+        "ar": "نظام إسقاط عالمي بمناطق",
+        "description": "A family of projected systems divided into longitudinal zones. Zone, hemisphere and datum must be specified."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Numbers alone do not locate data",
+        "body": "Values like 39.8 and 21.4 may be longitude and latitude in degrees, while 582000 and 2366000 may be projected coordinates in meters. Number patterns are not definitive evidence of a reference system. Obtain a PRJ file, survey description or source metadata. Axis order matters: X often means longitude and Y latitude in common data workflows, but axis order can vary by format and CRS."
+      },
+      {
+        "title": "Three different operations",
+        "body": "Define Projection assigns CRS metadata without changing coordinate values; use it only when the correct source CRS is known. Project calculates new coordinates from a known system to another and may require a geographic transformation between datums. Georeferencing aligns a drawing or image to known locations using control points and a suitable transformation. Randomly changing the CRS name does not fix misplaced data."
+      },
+      {
+        "title": "Distance, projection and verification",
+        "body": "Degrees are angular units; 100 degrees does not mean 100 meters. For a local project use an appropriate projected CRS with metric units or a suitable geodesic measurement. Our synthetic exercise uses WGS 84 / UTM zone 37N, EPSG:32637, near Makkah. This is a training-data choice, not an instruction to reassign company data. Check independent known points and document acceptable deviation."
+      }
+    ],
+    "analyst": "Request the CRS, units and accuracy before acceptance. Record transformations and validation points. Agree accuracy tolerances with the client; do not invent a survey tolerance for real work.",
+    "example": "If DWG coordinates range locally from 0 to 500, assigning EPSG:32637 alone will not place the drawing in Makkah. Reliable information is needed to connect the local drawing grid to ground coordinates.",
+    "steps": [
+      "Inspect layer properties for CRS and units.",
+      "Confirm the training data uses EPSG:32637; do not guess a CRS for an unknown source.",
+      "Write when to use each of the three operations.",
+      "Measure a gate-to-building distance and record the method."
+    ],
+    "deliverable": "A record of the CRS, units and validation method.",
+    "mistake": "Using Define Projection instead of Project, or manually shifting a drawing to fit imagery of uncertain accuracy.",
+    "quiz": {
+      "q": "The source coordinates are correct in a known CRS. To calculate coordinates in another CRS, use:",
+      "options": [
+        "Define Projection",
+        "Project",
+        "Change the layer color"
+      ],
+      "answer": 1,
+      "explain": "Project recalculates coordinates. Define Projection assigns the reference metadata without changing the numbers."
+    },
+    "refs": [
+      "crs",
+      "cad"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Geodatabase Design",
+    "subtitle": "From entities and fields to rules that keep information consistent.",
+    "minutes": 60,
+    "diagram": "schema",
+    "goals": [
+      "Design feature classes and fields",
+      "Choose data types and allowed values",
+      "Document quality rules and relationships"
+    ],
+    "prep": "ArcGIS Pro and the entity dictionary from chapter 3.",
+    "terms": [
+      {
+        "en": "Geodatabase",
+        "ar": "قاعدة بيانات جغرافية",
+        "description": "An ArcGIS structure organizing features, tables, relationships and rules; types include file and enterprise geodatabases."
+      },
+      {
+        "en": "Feature Class",
+        "ar": "فئة معالم",
+        "description": "A collection of features with the same geometry type, a spatial reference and common fields."
+      },
+      {
+        "en": "Feature Dataset",
+        "ar": "مجموعة فئات معالم",
+        "description": "A container for related feature classes sharing a spatial reference, used in workflows such as topology."
+      },
+      {
+        "en": "Domain",
+        "ar": "مجال قيم",
+        "description": "A definition of allowed values: coded values or a numeric range for appropriate fields."
+      },
+      {
+        "en": "Topology",
+        "ar": "قواعد العلاقات المكانية",
+        "description": "Rules checking geometric relationships, such as disallowing overlapping buildings when appropriate to the business model."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Start with the data model",
+        "body": "We need Buildings polygons, Gates points and Roads lines. Shared fields include AssetID as text, Name as text and Status as text with controlled values. ArcGIS adds internal fields such as OBJECTID and Shape. Do not rely on OBJECTID as a permanent business identifier across data transfers. Design stable, unique AssetID values and check uniqueness and missing values."
+      },
+      {
+        "title": "Types, domains and relationships",
+        "body": "Store road length numerically, inspection dates in a date field and identifiers with possible leading zeros as text. Status may allow Active, Maintenance and Inactive. A separate maintenance table can reference an asset through a stable key, allowing multiple maintenance records without duplicating geometry for each visit. This applies familiar relational database principles."
+      },
+      {
+        "title": "Create a file geodatabase and validate",
+        "body": "In Catalog, open the workspace folder and create a File Geodatabase named Facility.gdb. Create feature classes with the correct geometry type and EPSG:32637 for our synthetic data. Add fields, create a status domain and assign it to the field. Some topology tools require an appropriate license; if unavailable, document the rule and use available checks plus visual review."
+      }
+    ],
+    "analyst": "Provide a data dictionary listing field name, type, meaning, required status, allowed values and a valid example. Separate business rules from their software implementation.",
+    "example": "AssetID: Text(20), required and unique, example B01. Status: Text(20), allowing Active/Maintenance/Inactive. Disallowing building overlaps fits a simplified ground-level model, but may not fit a multi-floor representation.",
+    "steps": [
+      "Create Facility.gdb.",
+      "Create Buildings, Gates and Roads with correct geometry.",
+      "Add AssetID, Name and Status, and apply a status domain.",
+      "Write three quality rules and inspect one violation of each."
+    ],
+    "deliverable": "A geodatabase, field dictionary and quality-rule register.",
+    "mistake": "Applying spatial rules without understanding reality, or assuming a domain guarantees identifier uniqueness.",
+    "quiz": {
+      "q": "Which field type suits an identifier that can be 0012?",
+      "options": [
+        "Text",
+        "Double",
+        "Date"
+      ],
+      "answer": 0,
+      "explain": "Text preserves leading zeros and treats the value as an identifier rather than a quantity."
+    },
+    "refs": [
+      "gdb",
+      "pro"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Working in ArcGIS Pro",
+    "subtitle": "Build an understandable project with layers that can be searched and edited.",
+    "minutes": 65,
+    "diagram": "layers",
+    "goals": [
+      "Create a project and organize data sources",
+      "Add and edit geometry and attributes",
+      "Apply symbology, labels and queries"
+    ],
+    "prep": "Install ArcGIS Pro from the official source with an appropriate license or available trial. Check your version’s system requirements first. QGIS is a free conceptual alternative, but interface steps differ.",
+    "terms": [
+      {
+        "en": "Project (.aprx)",
+        "ar": "ملف مشروع",
+        "description": "Stores maps, layouts, connections and settings, referencing data sources that may live outside the file."
+      },
+      {
+        "en": "Catalog",
+        "ar": "مستعرض الموارد",
+        "description": "A place to browse folders, databases, maps and tools."
+      },
+      {
+        "en": "Symbology",
+        "ar": "التمثيل بالرموز",
+        "description": "Rules for colors and shapes that communicate attribute values visually."
+      },
+      {
+        "en": "Geoprocessing",
+        "ar": "المعالجة الجغرافية",
+        "description": "Operations with defined inputs, parameters and outputs that transform or analyze data."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Organize the project and its sources",
+        "body": "Create a Map Project named Facility_Asset_Mapping. Add a folder connection in Catalog and add feature classes. An APRX does not automatically embed all source files; moving the geodatabase may break references. Keep the project folder together and use meaningful layer names. Preserve source data and perform transformations on working copies."
+      },
+      {
+        "title": "Editing and saving",
+        "body": "Use Create Features to draw a building or gate, then populate its attributes. Review geometry before Save Edits. Saving the project and saving data edits serve different purposes. An active selection can affect subsequent tools. Check for selections before analysis so that you do not unintentionally process only a subset."
+      },
+      {
+        "title": "Display and query",
+        "body": "Use Unique Values on Status with distinct colors and clear labels. Select By Attributes selects records using expressions such as an AssetID match; syntax depends on field type and data source, so use Query Builder. A Definition Query limits the records exposed by a layer, while a selection marks a subset. Check both when expected results are missing."
+      }
+    ],
+    "analyst": "Check that map symbols and terminology match the client’s language and that search and attributes support agreed use cases.",
+    "example": "Building B02 under maintenance appears in amber with an additional symbol or label. Do not depend on color alone; keep the map understandable for people with color-vision differences.",
+    "steps": [
+      "Create a project and add the training data from the project page.",
+      "Open the Buildings table and check the record count.",
+      "Symbolize Status and label AssetID.",
+      "Select B01, clear the selection and save the project."
+    ],
+    "deliverable": "An APRX project with an organized map and a screenshot of the attribute table.",
+    "mistake": "Sharing only the APRX without its data sources, or leaving a selection that changes an analysis input.",
+    "quiz": {
+      "q": "What could explain processing one building instead of all buildings?",
+      "options": [
+        "Map color",
+        "An active selection",
+        "Title font size"
+      ],
+      "answer": 1,
+      "explain": "Many tools honor an active input-layer selection. Check selections and filters."
+    },
+    "refs": [
+      "pro",
+      "quick",
+      "requirements",
+      "trial"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "CAD and AutoCAD Fundamentals",
+    "subtitle": "Understand an engineering drawing before turning its geometry into geographic assets.",
+    "minutes": 55,
+    "diagram": "geometry",
+    "goals": [
+      "Read CAD drawing organization",
+      "Distinguish layers, entities and blocks",
+      "Check units, coordinates and closed boundaries"
+    ],
+    "prep": "AutoCAD with an appropriate license or an available official trial. ArcGIS Pro can display the training file without AutoCAD, but editing requires a suitable CAD tool.",
+    "terms": [
+      {
+        "en": "Computer-Aided Design (CAD)",
+        "ar": "التصميم بمساعدة الحاسب",
+        "description": "Using computer tools to create and document engineering designs."
+      },
+      {
+        "en": "DWG / DXF",
+        "ar": "صيغ ملفات رسم",
+        "description": "DWG is a common AutoCAD drawing format; DXF exchanges drawing information. Neither is inherently a GIS database."
+      },
+      {
+        "en": "CAD Layer",
+        "ar": "طبقة رسم",
+        "description": "Organizes drawing entities and display properties; distinct from a GIS feature class or display layer."
+      },
+      {
+        "en": "Block",
+        "ar": "كتلة رسم",
+        "description": "A reusable grouping, such as a gate symbol, which may contain CAD attributes."
+      },
+      {
+        "en": "Closed Polyline",
+        "ar": "خط متعدد مغلق",
+        "description": "A closed connected path that may represent a boundary; closure alone does not guarantee all geometric validity."
+      }
+    ],
+    "sections": [
+      {
+        "title": "A drawing is not a ready-made asset model",
+        "body": "CAD may contain sheet borders, dimensions, text, symbols and construction details alongside required assets. A line is not automatically a road, and nearby text is not automatically a building attribute. Interpret drawing layers with the author before selecting entities. Asset meaning needs business rules, not line color alone."
+      },
+      {
+        "title": "Inspect the drawing",
+        "body": "Inspect UNITS, LAYER and entity properties for unit settings, organization and coordinates. A unit setting does not replace knowledge of the actual coordinate units. When a drawing uses a local UCS, establish its relationship to WCS and the survey reference. Check duplicate entities, broken lines and open boundaries. Preserve the original before cleanup."
+      },
+      {
+        "title": "Prepare a simple training drawing",
+        "body": "Our training DXF contains BUILDINGS, GATES and ROADS layers. Buildings are closed outlines, gates are points and roads are lines. It is synthetic educational data with known metric coordinates, not a real survey. Open it, inspect properties and counts, and optionally save a DWG copy in AutoCAD."
+      }
+    ],
+    "analyst": "Request layer naming conventions, content definitions, drawing units and reference information. Specify which entities map to each GIS class.",
+    "example": "The CAD BUILDINGS layer contains footprints mapped to Buildings. Text on ANNOTATION needs separate review and a reliable association before it becomes names.",
+    "steps": [
+      "Download training-campus.dxf from the project page and open it.",
+      "Isolate BUILDINGS and verify three closed outlines.",
+      "Inspect one point and confirm metric coordinates using the training documentation.",
+      "Write a CAD-layer-to-GIS-class mapping table."
+    ],
+    "deliverable": "A documented CAD copy, layer mapping table and source quality notes.",
+    "mistake": "Converting all drawing lines, including dimensions and sheet borders, into roads or asset boundaries.",
+    "quiz": {
+      "q": "Does text near a CAD building necessarily identify that building?",
+      "options": [
+        "Always yes",
+        "No; verify the relationship and meaning"
+      ],
+      "answer": 1,
+      "explain": "Visual proximity does not guarantee an attribute relationship. A reliable association or review is needed."
+    },
+    "refs": [
+      "autocad",
+      "cad",
+      "autotrial"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "CAD–GIS Integration",
+    "subtitle": "A repeatable workflow from source inspection to an accepted geodatabase.",
+    "minutes": 75,
+    "diagram": "workflow",
+    "goals": [
+      "Choose direct reading or conversion",
+      "Run CAD To Geodatabase",
+      "Check layers, attributes and geometry after conversion"
+    ],
+    "prep": "ArcGIS Pro, Facility.gdb, the training DXF and its companion PRJ. Preserve the source copy.",
+    "terms": [
+      {
+        "en": "Georeferencing",
+        "ar": "الإسناد الجغرافي",
+        "description": "Aligning drawing coordinates to known ground locations with a suitable transformation; unnecessary if the drawing is already correctly positioned."
+      },
+      {
+        "en": "CAD To Geodatabase",
+        "ar": "أداة تحويل CAD",
+        "description": "Reads CAD data and creates feature classes in a geodatabase feature dataset."
+      },
+      {
+        "en": "Data Mapping",
+        "ar": "مطابقة البيانات",
+        "description": "Defining how source layers and properties map to target classes and fields."
+      },
+      {
+        "en": "ArcGIS for AutoCAD",
+        "ar": "إضافة تكامل",
+        "description": "An Esri plug-in supporting ArcGIS data access and editing in supported AutoCAD environments."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Choose an integration method",
+        "body": "Direct CAD reading is useful for inspection and some analyses. Editing, managing and publishing assets may require conversion. Integration is more than changing a file format: agree identifiers, attributes, ownership and update procedures. Bidirectional collaboration through ArcGIS for AutoCAD requires appropriate setup and services; it does not automatically result from a one-time conversion."
+      },
+      {
+        "title": "Run the conversion step by step",
+        "body": "Place training-campus.prj beside the DXF with the same base filename. Verify its spatial reference in file properties and add it to the map. Open CAD To Geodatabase; set the DXF input, Facility.gdb output and CAD_Import feature dataset name. Review the output reference. Inspect Polygon, Point and Polyline, filter by the Layer field and export relevant entities to working classes. Inspect the results because CAD geometry mapping can include additional representations."
+      },
+      {
+        "title": "Restore meaning and check quality",
+        "body": "Add AssetID, Name and Status according to the data dictionary. Geometry alone does not know that a building is under maintenance. Compare asset counts, identifiers and positions against the source and asset register; review duplicates and omissions. Record filenames, dates, tools, parameters and execution messages so someone else can repeat the workflow."
+      }
+    ],
+    "analyst": "Define acceptance rules, mappings, exception handling and the approver before updating the asset database.",
+    "example": "Three polygons are not sufficient simply because the source has three buildings. Their positions, shapes and identities must match expectations.",
+    "steps": [
+      "Add the DXF with its PRJ and validate positioning.",
+      "Run CAD To Geodatabase and record parameters.",
+      "Extract working classes using Layer and geometry type.",
+      "Populate attributes from asset-register.csv after verifying identity; do not rely on row order.",
+      "Compare geometry, counts and fields and record differences."
+    ],
+    "deliverable": "Converted GIS classes, a conversion log and quality review.",
+    "mistake": "Treating tool success as proof of correct coordinates, attributes and meaning.",
+    "quiz": {
+      "q": "After conversion succeeds, what comes next?",
+      "options": [
+        "Accept immediately",
+        "Validate location, geometry, counts and attributes",
+        "Delete the source"
+      ],
+      "answer": 1,
+      "explain": "Execution success means the tool finished, not that client requirements were met."
+    },
+    "refs": [
+      "cad",
+      "convert",
+      "integration"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Spatial Analysis and Map Production",
+    "subtitle": "Answer a clear question and communicate the result with its limitations.",
+    "minutes": 65,
+    "diagram": "buffer",
+    "goals": [
+      "Run attribute and spatial queries",
+      "Create a buffer using correct units",
+      "Produce a readable map with sources and reference information"
+    ],
+    "prep": "Cleaned layers from chapter 8 or the training GeoJSON, using an appropriate metric CRS.",
+    "terms": [
+      {
+        "en": "Buffer",
+        "ar": "نطاق قرب",
+        "description": "A region within a specified distance of a feature. Measurement method and geometry affect the result."
+      },
+      {
+        "en": "Select By Location",
+        "ar": "تحديد بالموقع",
+        "description": "Selecting features using spatial relationships such as intersection, containment or proximity."
+      },
+      {
+        "en": "Map Layout",
+        "ar": "تخطيط الخريطة",
+        "description": "An output page containing a map frame, title, legend, scale bar and source information."
+      },
+      {
+        "en": "Metadata",
+        "ar": "بيانات وصفية عن المصدر",
+        "description": "Information describing data origin, date, reference, quality and limitations."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Define the question before the tool",
+        "body": "Our question is: which building footprints intersect a 100-meter buffer around gate G01? This is planar distance in the training metric CRS, not travel time or road distance. Intersection includes a building when part of its footprint enters the buffer. Full containment requires a different relationship, while walking time requires an appropriate network."
+      },
+      {
+        "title": "A reproducible analysis",
+        "body": "Select G01 by AssetID and verify one record. Create a buffer of 100 Meters, reviewing method and CRS. Clear any previous building selection, then Select By Location: Buildings intersect GateBuffer. Export as Buildings_Near_G01 if a separate dataset is needed. Compare results with a manual expectation and record parameters."
+      },
+      {
+        "title": "From analysis to an honest map",
+        "body": "Create an appropriately sized layout with a map frame, question-focused title, concise legend and a scale bar linked to the frame. Include CRS, source, date and a synthetic-data notice. Avoid displaying every layer with equal emphasis; highlight results over a quiet background. Export a PDF and review legibility on small screens and in print."
+      }
+    ],
+    "analyst": "Verify that the analysis answers the agreed requirement and explain assumptions and limitations before decisions are made.",
+    "example": "In our exercise, G01 is at (582000, 2366000). B01 and B02 intersect the 100-meter buffer; B03 does not. This known synthetic result is a test oracle, not information about a real facility.",
+    "steps": [
+      "Select G01 and create a 100-meter buffer.",
+      "Select intersecting buildings and verify B01 and B02.",
+      "Prepare a layout with legend, scale and source.",
+      "Export a PDF and inspect it in a separate viewer."
+    ],
+    "deliverable": "A result layer, PDF map and analysis parameter log.",
+    "mistake": "Describing a straight-line buffer as a walking route or assuming selected buildings are entirely inside it.",
+    "quiz": {
+      "q": "A small part of a building intersects the buffer. Under Intersect, the building is:",
+      "options": [
+        "Selected",
+        "Always unselected",
+        "Deleted"
+      ],
+      "answer": 0,
+      "explain": "Intersection does not require full containment. Choose the relation based on the client’s question."
+    },
+    "refs": [
+      "buffer",
+      "pro",
+      "qmanual"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Testing, Documentation and Delivery",
+    "subtitle": "Deliver a reviewable, reproducible result linked to the requirements.",
+    "minutes": 60,
+    "diagram": "workflow",
+    "goals": [
+      "Distinguish QA, QC and UAT",
+      "Write tests with expected results",
+      "Prepare a handover package and professional demonstration"
+    ],
+    "prep": "Requirements document, geodatabase, PDF map and conversion log.",
+    "terms": [
+      {
+        "en": "Quality Assurance (QA)",
+        "ar": "ضمان الجودة",
+        "description": "Preventive processes governing production, such as source acceptance checklists and model reviews."
+      },
+      {
+        "en": "Quality Control (QC)",
+        "ar": "ضبط الجودة",
+        "description": "Checks on outputs to detect defects, such as incorrect positions or duplicate identifiers."
+      },
+      {
+        "en": "User Acceptance Testing (UAT)",
+        "ar": "اختبار قبول المستخدم",
+        "description": "The intended user verifies that results support their tasks and agreed acceptance criteria."
+      },
+      {
+        "en": "Requirements Traceability",
+        "ar": "تتبّع المتطلبات",
+        "description": "Linking each requirement to design, implementation, testing and evidence."
+      },
+      {
+        "en": "Test Case",
+        "ar": "حالة اختبار",
+        "description": "A specification of preconditions, inputs, steps, expected and actual results, and status."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Meaningful tests",
+        "body": "Search B01 and expect one record; search Z99 and expect none. Check missing or duplicate AssetID, out-of-domain status and CRS correctness. Layer visibility alone is not enough. The G01 analysis should return only B01 and B02; if it differs, inspect units, CRS, selections and spatial relation. Record actual outcomes and evidence rather than marking success in advance."
+      },
+      {
+        "title": "Traceability and defect handling",
+        "body": "Map FR-01 to the search test and FR-03 to the proximity test. Log defects with description, reproduction steps, impact, priority and resolution status. When the proximity rule changes, rerun affected tests rather than unrelated checks without a purpose. Review acceptance from the user’s task perspective, not the number of tools used."
+      },
+      {
+        "title": "Handover and demonstration",
+        "body": "Package the APRX, its sources, geodatabase, source files, outputs and a README explaining opening steps, versions, CRS, assumptions and limits. Test opening a copy from a new folder to reveal broken paths. In a five-minute demo, cover the problem, requirements, model, conversion, result and test evidence. State that this is an educational prototype and identify future production needs."
+      }
+    ],
+    "analyst": "Connect client needs to clear verification evidence and ensure the recipient can understand, open and review the deliverable.",
+    "example": "FR-03 → 100 m buffer + Intersect → TC-03 → Expected: B01,B02 → Actual: record after execution → Evidence: selection screenshot and identifier table.",
+    "steps": [
+      "Run search, identifier, status, CRS and proximity tests.",
+      "Record expected and actual results, Pass/Fail and evidence.",
+      "Link each requirement to at least one test.",
+      "Copy the handover package to a new folder and open it.",
+      "Rehearse a five-minute demo explaining prototype limits."
+    ],
+    "deliverable": "An openable project package, test report, traceability matrix and short demonstration.",
+    "mistake": "Filling actual results with expected values before execution, or delivering screenshots without data and opening instructions.",
+    "quiz": {
+      "q": "What should Actual Result contain before running a test?",
+      "options": [
+        "Pass by default",
+        "The expected result",
+        "Not run"
+      ],
+      "answer": 2,
+      "explain": "Actual results come from execution evidence. Keep the test unexecuted until that evidence exists."
+    },
+    "refs": [
+      "pro",
+      "cad",
+      "gdb"
+    ]
+  }
+]

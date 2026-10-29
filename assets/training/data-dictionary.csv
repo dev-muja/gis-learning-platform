@@ -1,0 +1,10 @@
+﻿Class,Field,Type,Required,Rule,Example
+Buildings,AssetID,Text(20),Yes,Unique stable identifier,B01
+Buildings,Name,Text(100),Yes,Non-empty descriptive name,Administration
+Buildings,Status,Text(20),Yes,Active|Maintenance|Inactive,Active
+Gates,AssetID,Text(20),Yes,Unique stable identifier,B01
+Gates,Name,Text(100),Yes,Non-empty descriptive name,Administration
+Gates,Status,Text(20),Yes,Active|Maintenance|Inactive,Active
+Roads,AssetID,Text(20),Yes,Unique stable identifier,B01
+Roads,Name,Text(100),Yes,Non-empty descriptive name,Administration
+Roads,Status,Text(20),Yes,Active|Maintenance|Inactive,Active

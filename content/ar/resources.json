@@ -1,1 +1,200 @@
-﻿[]
+[
+  {
+    "id": "gis",
+    "type": "documentation",
+    "title": "What is GIS?",
+    "publisher": "Esri",
+    "url": "https://www.esri.com/en-us/what-is-gis/overview",
+    "cost": "مجاني",
+    "description": "ابدئي بتعريف المجال وتطبيقاته ومكونات القرار المكاني."
+  },
+  {
+    "id": "gentle",
+    "type": "book",
+    "title": "A Gentle Introduction to GIS",
+    "publisher": "QGIS",
+    "url": "https://docs.qgis.org/3.44/en/docs/gentle_gis_introduction/",
+    "cost": "كتاب إلكتروني مجاني",
+    "description": "مرجع تأسيسي مفتوح للمفاهيم؛ مفيد للفصول 1 و3 و4."
+  },
+  {
+    "id": "qmanual",
+    "type": "book",
+    "title": "QGIS Training Manual",
+    "publisher": "QGIS",
+    "url": "https://docs.qgis.org/3.44/en/docs/training_manual/",
+    "cost": "دليل مجاني",
+    "description": "تمارين عملية مجانية؛ بديل للتطبيق عند غياب ترخيص ArcGIS."
+  },
+  {
+    "id": "gdb",
+    "type": "documentation",
+    "title": "Introduction to the geodatabase",
+    "publisher": "Esri",
+    "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/geodatabases/overview/what-is-a-geodatabase-.html",
+    "cost": "توثيق مجاني",
+    "description": "فهم بنية Geodatabase والمعالم والجداول والقواعد."
+  },
+  {
+    "id": "pro",
+    "type": "documentation",
+    "title": "ArcGIS Pro Documentation",
+    "publisher": "Esri",
+    "url": "https://pro.arcgis.com/en/pro-app/latest/help/main/welcome-to-the-arcgis-pro-app-help.htm",
+    "cost": "توثيق مجاني؛ البرنامج يحتاج ترخيصًا",
+    "description": "مرجع الخطوات والأدوات. قد تختلف الواجهة حسب الإصدار والترخيص."
+  },
+  {
+    "id": "crs",
+    "type": "documentation",
+    "title": "Coordinate systems, projections, and transformations",
+    "publisher": "Esri",
+    "url": "https://pro.arcgis.com/en/pro-app/latest/help/mapping/properties/coordinate-systems-and-projections.htm",
+    "cost": "توثيق مجاني",
+    "description": "مرجع الإحداثيات والإسقاطات والتحويل بين المراجع."
+  },
+  {
+    "id": "cad",
+    "type": "documentation",
+    "title": "Introduction to CAD data",
+    "publisher": "Esri",
+    "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/cad/what-is-cad-data.html",
+    "cost": "توثيق مجاني",
+    "description": "دعم ملفات CAD وقراءة البيانات ومتطلبات تحديد موقعها."
+  },
+  {
+    "id": "convert",
+    "type": "documentation",
+    "title": "CAD To Geodatabase",
+    "publisher": "Esri",
+    "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/conversion/cad-to-geodatabase.html",
+    "cost": "توثيق مجاني؛ التطبيق يحتاج البرنامج",
+    "description": "معلمات التحويل وسلوك المخرجات والقيود."
+  },
+  {
+    "id": "integration",
+    "type": "documentation",
+    "title": "ArcGIS for AutoCAD",
+    "publisher": "Esri",
+    "url": "https://www.esri.com/en-us/arcgis/products/arcgis-for-autocad/overview",
+    "cost": "راجعي متطلبات الإضافة والخدمات",
+    "description": "التكامل مع بيئة CAD؛ موضوع للتوسع بعد إتمام النموذج الأساسي."
+  },
+  {
+    "id": "buffer",
+    "type": "documentation",
+    "title": "Buffer tool",
+    "publisher": "Esri",
+    "url": "https://pro.arcgis.com/en/pro-app/latest/tool-reference/analysis/buffer.htm",
+    "cost": "توثيق مجاني",
+    "description": "طرق إنشاء نطاق القرب، الوحدات واختلاف القياس المستوي والجيوديسي."
+  },
+  {
+    "id": "basics",
+    "type": "course",
+    "title": "GIS Fundamentals / GIS Basics",
+    "publisher": "Esri Academy",
+    "url": "https://www.esri.com/en-us/training/catalog/5b73407f8659c25ea7014330/gis-fundamentals",
+    "cost": "مواد عامة بحساب مجاني؛ تحققي من شروط كل عنصر",
+    "description": "ابدئي بعنصر GIS Basics. قد تضم الخطة مواد تختلف شروط الوصول إليها."
+  },
+  {
+    "id": "free",
+    "type": "course",
+    "title": "Free training catalog",
+    "publisher": "Esri Academy",
+    "url": "https://www.esri.com/en-us/training/catalog/search?f=free",
+    "cost": "تصفية المواد المجانية؛ قد يلزم حساب",
+    "description": "ابحثي عن GIS Basics وArcGIS Pro Basics، وافحصي متطلبات كل دورة."
+  },
+  {
+    "id": "quick",
+    "type": "course",
+    "title": "ArcGIS Pro quick-start tutorials",
+    "publisher": "Esri",
+    "url": "https://pro.arcgis.com/en/pro-app/latest/get-started/pro-quickstart-tutorials.htm",
+    "cost": "الدروس مجانية؛ التطبيق يحتاج ترخيصًا",
+    "description": "تطبيقات قصيرة على الخرائط والتحرير والتحليل والإخراج."
+  },
+  {
+    "id": "autocad",
+    "type": "course",
+    "title": "Get started with AutoCAD",
+    "publisher": "Autodesk",
+    "url": "https://www.autodesk.com/learn/ondemand/collection/get-started-with-autocad",
+    "cost": "محتوى تعليمي متاح؛ البرنامج له ترخيص منفصل",
+    "description": "ابدئي بالواجهة والطبقات والرسم ثنائي الأبعاد قبل الأدوات المتقدمة."
+  },
+  {
+    "id": "esrivideo",
+    "type": "video",
+    "title": "Esri video learning",
+    "publisher": "Esri",
+    "url": "https://www.youtube.com/user/esritv",
+    "cost": "مشاهدة مجانية",
+    "description": "ابحثي داخل القناة عن ArcGIS Pro وCAD وGeodatabase. فضّلي فيديوهات الإصدار المناسب."
+  },
+  {
+    "id": "autovideo",
+    "type": "video",
+    "title": "AutoCAD official channel",
+    "publisher": "Autodesk",
+    "url": "https://www.youtube.com/user/AutoCADExchange",
+    "cost": "مشاهدة مجانية",
+    "description": "ابحثي عن Layers وUnits وBlocks و2D Drawing."
+  },
+  {
+    "id": "devvideo",
+    "type": "video",
+    "title": "Esri Developers",
+    "publisher": "Esri",
+    "url": "https://www.youtube.com/@esridevs",
+    "cost": "مشاهدة مجانية",
+    "description": "للتوسع لاحقًا في خرائط الويب وواجهات البرمجة، بعد الأساسيات."
+  },
+  {
+    "id": "paidbook",
+    "type": "book",
+    "title": "Getting to Know ArcGIS Pro 3.6",
+    "publisher": "Esri Press",
+    "url": "https://www.esri.com/en-us/esri-press/browse/getting-to-know-arcgis-pro-3-6",
+    "cost": "كتاب مدفوع؛ راجعي الطبعة المناسبة",
+    "description": "مرجع تدريبي اختياري. لا تحتاجين شراءه لإكمال مشروع الأسبوع."
+  },
+  {
+    "id": "trial",
+    "type": "software",
+    "title": "ArcGIS Pro trial",
+    "publisher": "Esri",
+    "url": "https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial",
+    "cost": "تجربة محدودة؛ راجعي الأهلية والشروط",
+    "description": "تحققي من الأهلية والتوفر قبل بدء التطبيق؛ مدة التجربة وشروطها قد تتغير."
+  },
+  {
+    "id": "requirements",
+    "type": "software",
+    "title": "ArcGIS Pro system requirements",
+    "publisher": "Esri",
+    "url": "https://pro.arcgis.com/en/pro-app/latest/get-started/arcgis-pro-system-requirements.htm",
+    "cost": "معلومات مجانية",
+    "description": "راجعي Windows والذاكرة والمساحة ومتطلبات إصدار البرنامج قبل التثبيت."
+  },
+  {
+    "id": "autotrial",
+    "type": "software",
+    "title": "AutoCAD trial",
+    "publisher": "Autodesk",
+    "url": "https://www.autodesk.com/products/autocad/free-trial",
+    "cost": "تجربة محدودة بشروط",
+    "description": "الترخيص التعليمي يحتاج أهلية مثبتة؛ التخرج وحده لا يضمن الحصول عليه."
+  },
+  {
+    "id": "qgis",
+    "type": "software",
+    "title": "QGIS Download",
+    "publisher": "QGIS",
+    "url": "https://qgis.org/download/",
+    "cost": "مجاني ومفتوح المصدر",
+    "description": "اختاري الإصدار طويل الدعم LTR للبداية. لا ينفذ كل خصائص Geodatabase بنفس طريقة ArcGIS."
+  }
+]

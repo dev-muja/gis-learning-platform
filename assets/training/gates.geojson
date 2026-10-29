@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "AssetID": "G01",
+        "Name": "Service gate",
+        "Status": "Active"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.791079635030954,
+          21.394359422119894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "AssetID": "G02",
+        "Name": "North gate",
+        "Status": "Active"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.79205305348471,
+          21.39598105340175
+        ]
+      }
+    }
+  ]
+}
